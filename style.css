@@ -6,12 +6,12 @@
 
 }
 
-/* img {
+ img {
   -webkit-backface-visibility: hidden; 
   -ms-transform: translateZ(0);
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
-} */
+} 
 
 .container{
 
@@ -50,8 +50,8 @@ opacity: 0px;
 
 }
 .left-bottom>img{
-  width: 115px;
-height: 115px;
+ width: 115px ;
+height: 115px ;
 gap: 0px;
 border-radius: 6px;
 opacity: 0px;
@@ -556,7 +556,6 @@ color: #000000;
   }
   .left-bottom > img {
     width: 30%; 
-    max-width: 50px;
-    max-height: 60px; 
+
   }
 }
