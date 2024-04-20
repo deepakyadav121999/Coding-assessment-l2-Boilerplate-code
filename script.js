@@ -11,7 +11,7 @@ let api =async()=>{
     const percent = (price1 / price2) * 100 
   let abc = parseInt(100-percent);
  let sizes =product.options[1].values; 
-console.log(product.options[1].values)
+console.log(product)
   containerDiv.innerHTML =`
   <div class="left">
             <div class="left-top">
@@ -65,24 +65,24 @@ console.log(product.options[1].values)
                 <label for="${sizes[0]}">${sizes[0]}</label>
              </div>
            <div>    
-            <input type="radio" name="size" value="medium">
-            <label for="medium">${sizes[1]}</label>
+            <input type="radio" name="size" value="${sizes[1]}">
+            <label for="${sizes[1]}">${sizes[1]}</label>
         </div>
 
            <div>
-            <input type="radio" name="size" value="large">
-            <label for="large">Large</label>
+            <input type="radio" name="size" value="${sizes[2]}">
+            <label for="${sizes[2]}">${sizes[2]}</label>
            </div>
            <div>
 
-            <input type="radio" name="size" value="Extra Large">
-            <label for="Extra Large">Extra Large</label>
+            <input type="radio" name="size" value="${sizes[3]}e">
+            <label for="${sizes[3]}">${sizes[3]}</label>
 
            </div>
 
            <div>
-            <input type="radio" name="size" value="XXL">
-            <label for="XXL">XXL</label>
+            <input type="radio" name="size" value="${sizes[4]}">
+            <label for="${sizes[4]}">${sizes[4]}</label>
            </div>
             
             
