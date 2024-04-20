@@ -534,7 +534,9 @@ color: #000000;
     height: 100px;
   }
   .discription{
-    width: 80%;
+    width: 200px;
+    padding: 5px;
+    font-size: small;
   }
 .right{
   padding: 10px;
