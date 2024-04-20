@@ -10,8 +10,8 @@ let api =async()=>{
     let price2 = product.compare_at_price.split("").slice(1).join("")
     const percent = (price1 / price2) * 100 
   let abc = parseInt(100-percent);
-
-console.log(product)
+ let sizes =product.options[1].values; 
+console.log(product.options[1].values)
   containerDiv.innerHTML =`
   <div class="left">
             <div class="left-top">
@@ -36,7 +36,7 @@ console.log(product)
            <div class="price-cnt">
             <div class="price-container">
                 <p class="price">${product.price}</p>
-                <mark class="compared_price">${product.compare_at_price}</mark>
+                <p class="compared_price">${product.compare_at_price}</p>
             </div>
             <div>
                 <p class="discount_percent">${abc}% Off</p>
@@ -59,13 +59,14 @@ console.log(product)
             <div class="choose-size">
             <p class="pcsize">Choose a Size</p>
             <div class="size">
+          
                 <div>
-                <input type="radio" name="size" value="small"  checked>
-                <label for="small">Small</label>
+                <input type="radio" name="size" value="${sizes[0]}"  checked>
+                <label for="${sizes[0]}">${sizes[0]}</label>
              </div>
            <div>    
             <input type="radio" name="size" value="medium">
-            <label for="medium">Medium</label>
+            <label for="medium">${sizes[1]}</label>
         </div>
 
            <div>
