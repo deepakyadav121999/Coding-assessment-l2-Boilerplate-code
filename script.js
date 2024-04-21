@@ -12,7 +12,7 @@ let api =async()=>{
   let abc = parseInt(100-percent);
  let sizes =product.options[1].values; 
  let mainImg = 'http://surl.li/stttx'
-console.log(product)
+console.log(sizes)
   containerDiv.innerHTML =`
   <div class="left">
             <div class="left-top">
@@ -60,35 +60,6 @@ console.log(product)
             <div class="choose-size">
             <p class="pcsize">Choose a Size</p>
             <div class="size">
-          
-                <div>
-                <input type="radio" name="size" value="${sizes[0]}"  checked>
-                <label for="${sizes[0]}">${sizes[0]}</label>
-             </div>
-           <div>    
-            <input type="radio" name="size" value="${sizes[1]}">
-            <label for="${sizes[1]}">${sizes[1]}</label>
-        </div>
-
-           <div>
-            <input type="radio" name="size" value="${sizes[2]}">
-            <label for="${sizes[2]}">${sizes[2]}</label>
-           </div>
-           <div>
-
-            <input type="radio" name="size" value="${sizes[3]}e">
-            <label for="${sizes[3]}">${sizes[3]}</label>
-
-           </div>
-
-           <div>
-            <input type="radio" name="size" value="${sizes[4]}">
-            <label for="${sizes[4]}">${sizes[4]}</label>
-           </div>
-            
-            
-            
-                
             
             </div>
             </div>
@@ -140,7 +111,8 @@ console.log(product)
     const addToCartButton = containerDiv.querySelector('.add-to-cart');
     const resultDiv = containerDiv.querySelector('#result');
     const bottomImages = containerDiv.querySelectorAll('.left-bottom .bottom-image');
-    const mainimg = document.getElementById('mainimg')
+    const mainimg = document.getElementById('mainimg');
+    const sizeDiv = document.querySelector('.size')
 
  
     minusButton.addEventListener('click', function() {
@@ -185,6 +157,20 @@ console.log(product)
     });
 
 
+    let sizeHTML = '';
+
+    sizes.forEach((item,index) => {
+        const checkedAttribute = index === 0 ? 'checked' : '';
+        sizeHTML += `
+            <div>
+                <input type="radio" name="size" value="${item}" ${checkedAttribute}>
+                <label for="${item}">${item}</label>
+            </div>
+        `;
+    });
+    
+
+    sizeDiv.innerHTML = sizeHTML;
 
 }
 api()
