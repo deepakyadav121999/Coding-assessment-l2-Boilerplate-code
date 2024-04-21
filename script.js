@@ -11,11 +11,12 @@ let api =async()=>{
     const percent = (price1 / price2) * 100 
   let abc = parseInt(100-percent);
  let sizes =product.options[1].values; 
+ let mainImg = 'http://surl.li/stttx'
 console.log(product)
   containerDiv.innerHTML =`
   <div class="left">
             <div class="left-top">
-              <img src="http://surl.li/stttx"   alt="">
+              <img src="${mainImg}" id="mainimg"  alt="">
             </div>
             <div class="left-bottom">
             
@@ -139,6 +140,7 @@ console.log(product)
     const addToCartButton = containerDiv.querySelector('.add-to-cart');
     const resultDiv = containerDiv.querySelector('#result');
     const bottomImages = containerDiv.querySelectorAll('.left-bottom .bottom-image');
+    const mainimg = document.getElementById('mainimg')
 
  
     minusButton.addEventListener('click', function() {
@@ -170,13 +172,15 @@ console.log(product)
 
     bottomImages.forEach(image => {
         image.addEventListener('click', function () {
-           
+            mainImg = this.src;
+
             bottomImages.forEach(d => {
                 d.classList.remove('selected');
                
             });
             
             this.classList.add('selected');
+            mainimg.src = mainImg;
         });
     });
 
