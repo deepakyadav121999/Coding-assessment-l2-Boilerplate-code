@@ -11,8 +11,9 @@ let api =async()=>{
     const percent = (price1 / price2) * 100 
   let abc = parseInt(100-percent);
  let sizes =product.options[1].values; 
+ let color = product.options[0].values; 
  let mainImg = 'http://surl.li/stttx'
-console.log(sizes)
+console.log(color)
   containerDiv.innerHTML =`
   <div class="left">
             <div class="left-top">
