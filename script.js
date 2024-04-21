@@ -53,8 +53,8 @@ console.log(color)
             <div class="colors">
                 <div class="yellow selective-border">✔</div>
                 <div class="green "></div>
-                <div class="skyblue"></div>
-                <div class="purple"></div>
+                <div class="blue"></div>
+                <div class="pink"></div>
             </div>
             </div>
             
